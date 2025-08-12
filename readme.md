@@ -1,82 +1,82 @@
-<!-- Age example: 30 == Thirty -->
-<!-- Number calculation result -->
-<!-- Accessing property of an object -->
+//Age example: 30 == Thirty 
+// Number calculation result 
+// Accessing property of an object 
 
 
-<!-- First we need to install Typescript compiler -->
+//First we need to install Typescript compiler 
 1: npm install -g typescript
 2: tsc --version
 
-<!-- How to run TS file -->
+//How to run TS file 
 tsc file_name
 tsc yourfile.ts --target es2016
 
-<!-- Intialize config file -->
+// Intializing config file 
 tsc --init
 
-<!-- run tsc -->
+//run tsc 
 
-<!-- Every JS file will be valid TS -->
-<!-- If there is an error in TS, still it will compile it and convert it into JS file -->
-<!-- It will be on the user how to tackle it -->
+// Every JS file will be valid TS 
+//If there is an error in TS, still it will compile it and convert it into JS file 
+//It will be on the user how to tackle it 
 
 
-<!-- watch mode -->
+// watch mode 
 tsc --watch
 
-<!-- How to quit it -->
+ //How to quit it 
 ctrl+C
 
 
-<!-- How to deal with number -->
+ //How to deal with number 
 let age:number = 30;
 
-<!-- How to deal with string -->
+// How to deal with string 
 let name: string = "Alice";
 
-<!-- How to deal with bigint -->
+// How to deal with bigint 
 let largeNumber: bigint = 123456789012345678901234567890n;
 
-<!-- How to deal with boolean -->
+//How to deal with boolean 
 let isActive: boolean = true;
 
-<!-- How to deal with undefined -->
+// How to deal with undefined 
 let value: undefined;
 
-<!-- How to deal with null -->
+// How to deal with null
 let value: null = null;
 
 
-<!-- Type Inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on the value assigned to it. This means that even if you don't explicitly specify a type, TypeScript can infer the most appropriate type and apply it. -->
+// Type Inference in TypeScript refers to the ability of the TypeScript compiler to automatically determine the type of a variable based on the value assigned to it. This means that even if you don't explicitly specify a type, TypeScript can infer the most appropriate type and apply it. 
 
 let age = 25;  // TypeScript infers that age is of type 'number'
 let name = "Alice";  // TypeScript infers that name is of type 'string'
 
 
-<!--  Explicit Type Annotations -->
+// Explicit Type Annotations 
 when we assigned type by our own
 
-<!-- Limitations of Type Inference -->
+// Limitations of Type Inference 
 any: if we don't initilize the value initially
 
-<!-- any -->
+// any -
 let value: any = 42;
 Represents any type of value. When a variable has the any type, it can be assigned any value, and no type checking is done.
 
 
-<!-- unknown -->
+// unknown 
 The any and unknown types in TypeScript are both used to represent values of any type.
 
 The unknown type is safer than any because you cannot perform operations on an unknown value without first narrowing its type through type checks.
 
 
-<!-- Non Primitive Data type -->
+// Non Primitive Data type 
 
-<!-- 1: Array -->
+//1: Array 
 let numbers: number[] = [2,3,4,6];
 let numbers:(string | number)[] = [2,3,4,5,6,"Mohit"];
 
-<!-- 2: Tuples -->
+// 2: Tuples 
 Tuples are arrays with a fixed number of elements of specific types.
 
 let tuple: [string, number] = ["Rohit",10];
@@ -84,7 +84,7 @@ let tuple: [string, number] = ["Rohit",10];
 
 
 
-<!--  Compile-time refers to the phase when the source code is translated into machine code or an intermediate format (e.g., bytecode). This is done by a compiler. -->
+// Compile-time refers to the phase when the source code is translated into machine code or an intermediate format (e.g., bytecode). This is done by a compiler. 
 
 
 Errors detected at this phase are called compile-time errors.
@@ -95,9 +95,9 @@ Variable declarations without initialization (if required by the language).
 
 
 
-<!-- Runtime refers to the phase when the program is executed after it has been compiled (or interpreted). -->
+// Runtime refers to the phase when the program is executed after it has been compiled (or interpreted). 
 
-<!-- Errors detected during this phase are called runtime errors.
+//Errors detected during this phase are called runtime errors.
 Examples of runtime errors include:
 Dividing by zero.
 Accessing undefined variables or null references.
@@ -106,12 +106,12 @@ Examples of Runtime Activities:
 
 Executing code instructions.
 Handling user inputs.
-Interacting with APIs or databases -->
+Interacting with APIs or databases 
 
 
 
 
-<!--  Objects -->
+//  Objects 
 
 let person: { name: string; age: number; isStudent: boolean };
 
@@ -122,13 +122,13 @@ person = {
 }
 
 
-<!-- Inline -->
+// Inline 
 let account: {name:string, balance:number, age?:number} = {
     name:"Rohit",
     balance:420
 };
 
-<!-- Using Type Alises -->
+// Using Type Alises 
 
 type student = {
    names: string,
@@ -141,7 +141,7 @@ let College_student: student = {
 };
 
 
-<!-- using interface -->
+//using interface 
 
 
 interface customer {
@@ -158,16 +158,16 @@ let per: customer = {
     age: 12
 }
 
-<!-- extend with interface -->
+// extend with interface 
 
-<!-- type uses intersections (&) to combine multiple types. -->
+// type uses intersections (&) to combine multiple types. -->
 
 type animal = gen & {
 
 }
 
 
-<!--  Declaration Merging -->
+//  Declaration Merging 
 interface person {
     name: string
 }
@@ -176,7 +176,7 @@ interface person {
     age: number
 }
 
-<!-- Above syntax is allowed -->
+//Above syntax is allowed -->
 
 But with type it is not allowed
 
@@ -184,30 +184,30 @@ But with type it is not allowed
  -->
 
 
-<!-- Nested Objects -->
+// Nested Objects -->
 
 
-<!-- Utility Types for Objects -->
+//Utility Types for Objects 
 1: Partial<Person>
 2: Required<Person>
 3: Readonly<Person>
 
-<!-- Array of Objects -->
+// Array of Objects 
 
 
-<!-- Function in JS -->
+//Function in JS 
 
 
 function greet(name: string): string {
     return `Hello, ${name}!`;
 }
 
-<!-- Optional Parameters ?-->
+//Optional Parameters ?
 function meet(name?:string):void{
     console.log(`Hello ${name||"Guest"}`);
 }
 
-<!-- Default parameter -->
+// Default parameter -->
 
 
 
